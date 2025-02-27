@@ -1,0 +1,17 @@
+rm -rf node_modules
+rm -rf package_lock.json
+
+yarn install
+
+yarn add @react-navigation/native
+yarn add react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated react-native-vector-icons @react-native-masked-view/masked-view
+yarn add @react-navigation/stack
+yarn add @react-navigation/bottom-tabs
+yarn add @react-navigation/drawer
+yarn add @react-navigation/native-stack
+
+cd ios && pod install && cd ../
+
+yarn start --reset-cache
+
+yarn run ios
